@@ -1,2 +1,0 @@
-# GEMBA_KOxTZ
-GEMBA_KOxTZ
