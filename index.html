@@ -900,15 +900,15 @@ video {
       <div>
         <label>Маршрут обхода</label>
         <select id="route">
-          <option>Участок гладкой трубы</option>
-          <option>Участок СВ</option>
-          <option>Участок НСИ</option>
-          <option>Складской комплекс</option>
-          <option>Транспортный цех</option>
-          <option>Участок переработки полимеров</option>
-          <option>ОТК и ИЛ</option>
-          <option>РМЦ</option>
-          <option>АКБ</option>
+          <option>Цех экструзии</option>
+          <option>Цех литьевых и сборных изделий</option>
+          <option>Цех по производству тепловых фитингов</option>
+          <option>Склад/ Кладовщики</option>
+          <option>Погрузо-разгрузочный участок</option>
+          <option>Отдел контроля качества и испытаний</option>
+          <option>Служба главного энергетика</option>
+          <option>Служба главного механика</option>
+          <option>Автотранспортный участок</option>
         </select>
       </div>
     </div>
@@ -1276,7 +1276,7 @@ function updateLocationSelect(remarkId) {
     const locationSelect = document.getElementById(`location-${remarkId}`);
     const customLocationInput = document.getElementById(`custom-location-${remarkId}`);
     if (!locationSelect) return;
-    const options = ['Территория возле КПП', 'Склад ТМЦ'];
+    const options = ['Цех гладкой трубы', 'Цех гофрированной трубы', 'Участок по переработке вторичного полиэтилена','Участок станков ЧПУ','Заготовительный участок','Участок сборки'];
     const currentValue = locationSelect.value;
     locationSelect.innerHTML = '';
     options.forEach(opt => {
@@ -1471,11 +1471,15 @@ function addRemark() {
                         <div class="meta-field">
                             <label>Ответственный</label>
                             <select id="responsible-${remarkCount}" onchange="toggleCustomInput(this, '${remarkId}'); onFieldChange()">
-                                <option>Пырескин О.Ш.</option>
-                                <option>Сорочан А.В.</option>
-                                <option>Начальник смены</option>
-                                <option>Козуб С.А.</option>
-                                <option value="custom">Другие...</option>
+                                <option>Белевич Евгений Сергеевич</option>
+<option>Буевич Дмитрий Александрович</option>
+<option>Чернявский Александр Викторович</option>
+<option>Алексеенко Татьяна Владимировна</option>
+<option>Болоников Юрий Петрович</option>
+<option>Богданова Татьяна Николаевна</option>
+<option>Лагойский Дмитрий Николаевич</option>
+<option>Василевский Сергей Николаевич</option>
+<option value="custom">Другие...</option>
                             </select>
                             <input id="custom-responsible-${remarkId}" placeholder="Введите ФИО" style="display:none;margin-top:6px" onchange="onFieldChange()">
                         </div>
